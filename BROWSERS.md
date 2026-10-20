@@ -1,6 +1,6 @@
 # BROWSERS LIST - By UMBRA
 
-## Tor Browser
+## Tor Browser - The Most Privacy Supporter.
 
 1. **Official Website:** https://www.torproject.org/
 2. **Open Source:** Yes
@@ -47,3 +47,62 @@ Tor Browser is a strong choice for users who prioritize anonymity, anti-tracking
 **Security Verdict:** Strong privacy and anonymity protections, but not immune to vulnerabilities, endpoint compromise, or user mistakes.
 
 ___
+## Mullvad Browser
+1. **Official Website:** https://mullvad.net/browser
+2. **Open Source:** Yes
+3. **Storage:** Local device
+4. **Privacy Features:** Strong anti-fingerprinting, tracker blocking, privacy-focused defaults
+5. **Security Model:** Reduces browser fingerprint uniqueness; can be combined with a trusted VPN
+6. **Platforms:** Windows, macOS, Linux
+7. **Best For:** Strong privacy without routing traffic through the Tor network
+8. **Main Weakness:** Does not hide your IP address by itself
+___
+## LibreWolf
+1. **Official Website:** https://librewolf.net/
+2. **Open Source:** Yes
+3. **Storage:** Local device
+4. **Privacy Features:** uBlock Origin, strict tracking protection, anti-fingerprinting settings, telemetry disabled
+5. **Security Model:** Privacy-hardened Firefox-based browser
+6. **Platforms:** Windows, macOS, Linux
+7. **Best For:** Users who want strong privacy by default and extensive control
+8. **Main Weakness:** Some websites may not work correctly; updates must be installed regularly
+___
+## Brave Browser
+1. **Official Website:** https://brave.com/
+2. **Open Source:** Yes
+3. **Storage:** Local device, with optional sync features
+4. **Privacy Features:** Built-in ad and tracker blocking, cookie protections, fingerprinting defenses
+5. **Security Model:** Chromium-based browser with built-in privacy protections
+6. **Platforms:** Windows, macOS, Linux, Android, iOS
+7. **Best For:** Everyday browsing with strong privacy and good website compatibility
+8. **Main Weakness:** Some optional features and services may not suit users seeking minimal browser functionality
+___
+## Mozilla Firefox with Arkenfox
+1. **Official Website:** https://www.mozilla.org/firefox/
+2. **Open Source:** Yes
+3. **Storage:** Local device, with optional sync
+4. **Privacy Features:** Tracking protection, configurable privacy settings, optional fingerprinting resistance
+5. **Security Model:** Firefox hardened using the Arkenfox user.js configuration
+6. **Platforms:** Windows, macOS, Linux, Android, iOS
+7. **Best For:** Advanced users who want fine-grained privacy control
+8. **Main Weakness:** Requires configuration and maintenance; some sites may break
+___
+## Waterfox
+1. **Official Website:** https://www.waterfox.net/
+2. **Open Source:** Yes, with source availability and licensing varying by component
+3. **Storage:** Local device
+4. **Privacy Features:** Privacy-oriented settings and reduced reliance on some built-in services
+5. **Security Model:** Firefox-derived browser
+6. **Platforms:** Windows, macOS, Linux, Android
+7. **Best For:** Users seeking a Firefox-based alternative
+8. **Main Weakness:** Privacy protections and update cadence should be evaluated against current releases
+___
+## Vanadium
+1. **Official Website:** https://grapheneos.org/features#vanadium
+2. **Open Source:** Yes
+3. **Storage:** Local device
+4. **Privacy Features:** Security hardening, exploit mitigations, privacy protections
+5. **Security Model:** Chromium-based browser optimized for GrapheneOS
+6. **Platforms:** GrapheneOS devices
+7. **Best For:** Security-conscious users running GrapheneOS
+8. **Main Weakness:** Intended for GrapheneOS rather than general desktop use
