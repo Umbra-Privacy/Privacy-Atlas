@@ -17,10 +17,11 @@
 - **Sources:** Oxen Privacy Tech Foundation Network Specifications and Independent Cryptographic Reviews.
 - **Last Reviewed:** 2026-10-20
 
-**Privacy Rating:** 9.5/10
-**Security Rating:** 9/10
-**Anonymity Rating:** 10/10
+**Privacy Rating:** 8.5/10
+**Security Rating:** 8/10
+**Anonymity Rating:** 8.75/10
 
-**Verdict:** Session is a premier messaging tool for absolute anonymity due to its lack of phone-number ties and robust metadata protection via onion routing.
+**Verdict:**
+ession offers privacy-oriented messaging without requiring a phone number or email address. Its protection depends on the threat model, device security, network conditions, and communication features used. Do not interpret pseudonymous identifiers or onion routing as guarantees of complete anonymity. Review current technical documentation, independent audits, and security advisories before relying on it for high-risk communications.
 
 ___
