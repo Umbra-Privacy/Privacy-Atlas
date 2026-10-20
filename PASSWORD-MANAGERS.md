@@ -133,3 +133,79 @@ Users should employ a strong, unique account password, enable two-factor authent
 **Security Verdict:** Proton Pass is a strong candidate for personal and organizational password management, particularly for users who prioritize end-to-end encryption, open-source transparency, and cross-platform access. Its security depends on both its technical design and the user's security practices.
 
 ___
+## KeePass
+
+- **Official Website:** https://keepass.info/
+- **Open Source:** Yes — https://sourceforge.net/projects/keepass/
+- **Storage:** Local encrypted database file (KDBX for KeePass 2.x). Users can manually synchronize or back up the database using their preferred storage service.
+- **End-to-End Encryption (E2EE):** Not applicable in the traditional cloud-sync sense. KeePass encrypts the database locally before it is stored or transferred.
+- **Security Model:** Local-first, offline-capable password management. The database is protected by a master key that can combine a master password, key file, and Windows user account key.
+- **Platforms:** Official KeePass 2.x primarily supports Windows. KeePass 2.x may run on other platforms with compatible runtimes; third-party ports are available for mobile and other operating systems.
+- **Independent Security Audits:** Publicly documented security research and vulnerability assessments exist. Do not assume every release has undergone a comprehensive independent audit.
+- **Last Reviewed:** 2026-10-20
+
+### Strengths
+
+- **Open Source:** KeePass is free and open source, allowing its source code to be inspected and independently reviewed.
+- **Strong Encryption:** KeePass 2.x supports AES-256 and ChaCha20 for database encryption. KeePass 1.x supports AES-256 and Twofish.
+- **Local Storage and Privacy:** The database is stored as an encrypted file under the user's control. KeePass does not require a vendor-operated cloud account or centralized synchronization server.
+- **Multiple Key Components:** Users can combine a master password with a key file or a Windows user account key, adding protection when configured correctly.
+- **Protection Against Password Guessing:** Key derivation functions such as AES-KDF and Argon2 in KeePass 2.x increase the computational cost of guessing a weak master password.
+- **Offline Availability:** Users can access their password database without an internet connection, provided the application and database are available locally.
+- **Portable Use:** KeePass can be run in portable configurations, making it possible to carry an encrypted database and application between compatible systems.
+- **Security Controls:** Includes automatic locking, clipboard clearing options, secure desktop support for entering the master key, password generation, and process-memory protections with documented limitations.
+- **No Mandatory Cloud Subscription:** The core application is free, and users choose how to back up or synchronize the encrypted database.
+
+### Weaknesses and Risks
+
+- **Master Password Dependency:** Losing the master password or another required key component can result in permanent loss of access to the database. KeePass does not provide a universal recovery key.
+- **Compromised Devices:** Malware, keyloggers, screen capture tools, or spyware may capture passwords when the database is open or credentials are entered.
+- **Manual Synchronization:** Users must arrange synchronization and backups themselves. Poorly managed copies may become outdated, conflict, or be lost.
+- **Key File Management:** Losing a required key file can make the database inaccessible. Storing the key file alongside the database may reduce the security benefit if both are stolen together.
+- **Plugin Risks:** Third-party plugins can expand functionality but may introduce vulnerabilities or access sensitive information. Only install trusted, necessary plugins.
+- **Autofill and Auto-Type Risks:** Automated typing and integration with other applications can expose credentials if the wrong window or website is targeted.
+- **Open Source Is Not a Guarantee:** Source availability does not eliminate implementation flaws, malicious modifications, or vulnerabilities in dependencies.
+- **Port and Compatibility Differences:** Third-party mobile and cross-platform implementations may have different features, release schedules, and security properties from the official Windows application.
+- **Local Backup Security:** Copies of the encrypted database may be exposed to offline password-guessing attempts if an attacker obtains them. A weak master password increases this risk.
+- **No Centralized Recovery or Administration by Default:** Organizations may need additional tools and procedures to manage access, backups, updates, and recovery across multiple users.
+
+### Has KeePass Ever Been Hacked?
+
+- **Confirmed centralized server breach or cloud vault leak:** KeePass is primarily a local password manager and does not operate a mandatory centralized vault synchronization server. I could not verify a publicly confirmed incident involving a breach of an official KeePass cloud vault service exposing users' databases. This does not prove that every KeePass installation, third-party port, plugin, or user's device has always been secure.
+
+- **2026 — CVE-2026-86776 / Database Header Memory Allocation:** KeePass's official security-issues page discusses a report concerning memory allocation when processing a KDBX database header. The project maintainer disputes the claim that this behavior constitutes a security vulnerability, explaining that the file format permits large header fields and that the application validates the field size. This is a disputed security report, not evidence of a confirmed password theft or database breach.
+- **Source:** https://keepass.info/help/kb/sec_issues.html
+
+- **Historical — KDB/KDBX Header Authentication Issues:** Research into password-manager database formats identified weaknesses involving unauthenticated database headers, including possible silent data removal or corruption in older formats and versions. KeePass introduced header authentication in KeePass 1.24 and 2.20 to address these issues. The published analysis stated that confidentiality was not compromised by these particular attacks.
+- **Source:** https://keepass.info/help/kb/sec_issues.html
+
+- **Historical — KeeFarce and Running-Process Extraction:** The KeeFarce tool demonstrated that an attacker with sufficient access to a running KeePass process could extract data from an unlocked database. The KeePass maintainer explains that this reflects the broader limitations of defending an application against spyware running with the same user's privileges, rather than a remote attack against an encrypted database server.
+- **Source:** https://keepass.info/help/kb/sec_issues.html
+
+- **2022 — CVE-2022-0725:** A security issue involving sensitive data in Fedora system logs was listed in KeePass's official security-issues documentation. This is a specific logging issue and should not be described as a breach of KeePass's servers or a confirmed mass disclosure of password databases.
+- **Source:** https://keepass.info/help/kb/sec_issues.html
+
+**Important distinction:** KeePass vulnerabilities, weaknesses in older versions, malicious plugins, and attacks against compromised computers are not equivalent to a breach of a centralized KeePass server. Because KeePass is local-first, the relevant security questions include database encryption, the strength of the master key, application integrity, and the security of the device that opens the database.
+
+### Security References
+
+- **Official Website:** https://keepass.info/
+- **Security Documentation:** https://keepass.info/help/base/security.html
+- **Official Security Issues List:** https://keepass.info/help/kb/sec_issues.html
+- **Master Key Documentation:** https://keepass.info/help/base/keys.html
+- **Database Settings and Key Derivation:** https://keepass.info/help/v2/dbsettings.html
+- **Official Release History:** https://keepass.info/news/news_all.html
+- **Official Source Code / Project:** https://sourceforge.net/projects/keepass/
+- **KeePass 2.x File Format Specification:** https://keepass.info/help/kb/kdbx.html
+
+### Overall Assessment
+
+KeePass is a strong option for users who prefer local password storage, open-source software, offline access, and direct control over their encrypted database files. Unlike cloud-first password managers, it does not require a provider-operated synchronization service to store and open the vault.
+
+Its security depends heavily on the strength of the master password, appropriate key-derivation settings, careful handling of any key files, trusted application downloads, and protection of the device while the database is unlocked. Users who synchronize the database through a cloud storage provider should remember that the provider stores a copy of the encrypted file and that synchronization and recovery are their responsibility.
+
+Users should create a strong and unique master passphrase, consider Argon2 for KeePass 2.x where supported by their clients, keep the application and trusted ports updated, avoid unnecessary plugins, enable automatic locking, and maintain tested backups of the encrypted database. Key files should be backed up securely and stored separately from the database where practical.
+
+**Security Verdict:** KeePass is a strong candidate for users who prioritize local control, offline functionality, and open-source transparency. Its lack of a mandatory cloud service reduces dependence on a centralized provider, but places greater responsibility on users to protect devices, manage keys, maintain backups, and secure any synchronization process.
+
+___
