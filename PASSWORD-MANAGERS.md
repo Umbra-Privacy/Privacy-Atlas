@@ -63,4 +63,73 @@ Its main risks involve compromised user devices, phishing, master password loss,
  
 **Security Verdict:** A strong candidate for personal and organizational use, provided users maintain good security practices and keep their software up to date.
 
-–––
+___
+
+## Proton Pass
+
+- **Official Website:** https://proton.me/pass
+- **Open Source:** Yes — https://github.com/ProtonPass
+- **Storage:** Cloud-based, with end-to-end encrypted synchronization. No standard self-hosting option.
+- **End-to-End Encryption (E2EE):** Yes
+- **Security Model:** Zero-knowledge architecture. Vault data is encrypted on the user's device before synchronization with Proton's servers.
+- **Platforms:** Windows, macOS, Linux, Android, iOS, Web, browser extensions, and CLI.
+- **Independent Security Audits:** Yes — Cure53 (2023) and Recurity Labs (2026).
+- **Last Reviewed:** 2026-10-20
+
+### Strengths
+
+- **Open Source:** Publicly available source code allows researchers to inspect the implementation. However, open source does not guarantee the absence of vulnerabilities.
+- **Strong Encryption:** Uses AES-256-GCM for vault data encryption, according to Proton's published security documentation.
+- **Independent Security Audits:** Proton Pass has undergone independent assessments, including Cure53 in 2023 and Recurity Labs in 2026.
+- **End-to-End Encrypted Synchronization:** Vault contents are encrypted so the provider cannot ordinarily read their plaintext contents.
+- **Cross-Platform Support:** Supports major desktop and mobile platforms, web access, and browser extensions.
+- **Security Features:** Includes password generation, passkey management, secure sharing, two-factor authentication support, and hide-my-email aliases. Availability may vary by plan.
+- **Public Bug Bounty Program:** Security researchers can report vulnerabilities through Proton's responsible disclosure process.
+
+### Weaknesses and Risks
+
+- **Account Recovery Dependency:** Losing access to the account or necessary recovery information may make it difficult or impossible to restore access.
+- **Compromised Devices:** Malware, keyloggers, and malicious extensions may expose credentials after they are decrypted on the device.
+- **Phishing Attacks:** A password manager does not eliminate phishing or guarantee that users will avoid fraudulent websites.
+- **Cloud Service Dependency:** Hosted synchronization depends on Proton's infrastructure and service availability.
+- **No Primary Self-Hosting Option:** Proton Pass is primarily a managed cloud service, which may not suit users who require complete control over server infrastructure.
+- **Browser and Autofill Risks:** Vulnerabilities in extensions, browsers, or autofill behavior can expose credentials in certain circumstances.
+- **Open Source Is Not a Guarantee:** Public code can still contain implementation flaws, dependency vulnerabilities, and configuration errors.
+- **Third-Party Trust and Account Security:** Security also depends on account authentication, recovery procedures, device security, and correct implementation of cryptographic protocols.
+
+### Has Proton Pass Ever Been Hacked?
+
+- **Confirmed server breach or vault data leak:** I could not verify a publicly confirmed incident in the sources reviewed in which attackers breached Proton Pass servers and exposed users' decrypted vault contents. This is not proof that no undisclosed incident has ever occurred.
+
+- **2026 — Recurity Labs Security Audit:** Proton announced an independent assessment conducted between January and April 2026, covering browser extensions, mobile and desktop applications, and the command-line interface. This was a security assessment, not evidence of an actual server breach.
+- **Source:** https://proton.me/business/blog/proton-pass-audit-2026
+
+- **2025 — Clickjacking Vulnerability:** Proton reported a clickjacking vulnerability affecting its web application and stated that it was addressed in version 1.31.6. This was an application-level vulnerability, not evidence of a server compromise or a confirmed mass vault-data leak.
+- **Source:** https://proton.me/blog/proton-pass-is-protected-against-clickjacking-attacks
+
+- **2023 — Cure53 Security Audit:** Cure53 assessed Proton Pass's mobile applications, browser extensions, and API. Proton published information about the findings and remediation status. An audit finding is not, by itself, evidence of an actual attack.
+- **Source:** https://proton.me/blog/pass-open-source-security-audit
+
+**Important distinction:** A security audit or vulnerability report does not prove that an attacker exploited the issue, stole data, or compromised the provider's servers. Likewise, the absence of a publicly confirmed server breach does not prove that a service is invulnerable.
+
+### Security References
+
+- **Official Website:** https://proton.me/pass
+- **Security Overview:** https://proton.me/pass/security
+- **Security Model and Encryption Design:** https://proton.me/blog/proton-pass-security-model
+- **Independent Security Audit (2023):** https://proton.me/blog/pass-open-source-security-audit
+- **2026 Recurity Labs Audit:** https://proton.me/business/blog/proton-pass-audit-2026
+- **Clickjacking Vulnerability and Fix:** https://proton.me/blog/proton-pass-is-protected-against-clickjacking-attacks
+- **Official Source Code:** https://github.com/ProtonPass
+
+### Overall Assessment
+
+Proton Pass is a strong option for users seeking an open-source password manager with end-to-end encryption, cross-platform synchronization, and independently assessed security controls.
+
+Its published encryption model, public source code, security audits, and vulnerability disclosure program provide meaningful security assurances. However, these measures do not eliminate vulnerabilities or risks from compromised devices, phishing, account recovery problems, or browser extensions.
+
+Users should employ a strong, unique account password, enable two-factor authentication, keep applications updated, secure their recovery methods, and maintain a secure backup or export where appropriate.
+
+**Security Verdict:** Proton Pass is a strong candidate for personal and organizational password management, particularly for users who prioritize end-to-end encryption, open-source transparency, and cross-platform access. Its security depends on both its technical design and the user's security practices.
+
+___
