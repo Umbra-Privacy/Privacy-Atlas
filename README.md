@@ -3,23 +3,3 @@ By UMBRA - A curated, community-driven knowledge base for digital privacy, onlin
 
 ---
 
-₿ Support Privacy Atlas
-
-Support independent privacy education.
-
-Privacy Atlas is a community-driven project by UMBRA. Bitcoin donations help support its development, maintenance, documentation, and community resources.
-
-Every contribution is voluntary. Every satoshi helps.
-
-Bitcoin (BTC)
-
-"bc1q6uqrg5h80hgurftgj98scp06vyl89gnlq9pnql"
-
-"Donate with Bitcoin ₿" (https://bitcoin.org/en/)
-
-«⚠️ Only send BTC to a verified Bitcoin address. Cryptocurrency transactions are generally irreversible. Always verify the address before sending.»
-
-Transparency matters. Donations are intended to support Privacy Atlas and its community resources.
-
-Privacy is a right.
-UMBRA · Privacy Atlas
